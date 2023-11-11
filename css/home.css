@@ -59,7 +59,6 @@ nav ul {
 
 nav ul li {
     font-size: 1.2rem;
-    cursor: pointer;
 }
 
 select {
@@ -241,6 +240,8 @@ span {
 .box-md img:hover {
     transform: scale(1.1);
     transition: 0.6s;
+
+
 }
 
 .box-img {
@@ -250,8 +251,12 @@ span {
 
 }
 
-.box-img:hover {
-    border-radius: 5px;
+.splide__slide img {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+
 }
 
 .box-img img {
@@ -298,7 +303,7 @@ span {
     }
 
     nav input {
-        width: 200px;
+        width: 100px;
     }
 
     nav ul li {

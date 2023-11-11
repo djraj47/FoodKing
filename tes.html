@@ -1,50 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Password Authentication</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
 </head>
+<style>
+    .clickable {
+        cursor: pointer;
+        background-color: lightblue;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+    }
+
+    .appended-container {
+        border: 2px solid gray;
+        padding: 10px;
+        margin-top: 20px;
+    }
+</style>
 
 <body>
-    <h1>Password Authentication</h1>
-    <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Login">
-    </form>
-
-    <p id="message"></p>
-
-    <script>
-        // Define a username and password for authentication
-        const validUsername = "myuser";
-        const validPassword = "mypassword";
-        const username = "Raj kiran"
-
-        // Get the form and message elements
-        const loginForm = document.getElementById("loginForm");
-        const message = document.getElementById("message");
-
-        // Add a submit event listener to the form
-        loginForm.addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the form from actually submitting
-
-            // Get the values entered by the user
-            const user = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-
-            // Check if the entered username and password match the valid ones
-            if (user === validUsername && password === validPassword) {
-                message.textContent = "Authentication successful!";
-
-
-            } else {
-                message.textContent = "Authentication failed. Please try again.";
-            }
-        });
-    </script>
+    <section class="cart">
+        <span onclick="removeModal()">&times;</span>
+        <div class="itemimg">
+            <img src="/images/chowmein (1).jpeg" width="160px" alt="">
+        </div>
+        <div class="itemdetail">
+            <div class="itemtitle">
+                <h5>Veg Chowmein</h5>
+            </div>
+            <div class="itemprice">
+                <p>₹200</p>
+            </div>
+            <div class="addbtn">
+                <button onclick="addToCart()">Add</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cart-billing">
+        <!-- Items will be added here -->
+    </section>
+    
 </body>
+<script>
+   function removeModal() {
+    const cart = document.querySelector('.cart');
+    cart.style.display = 'none';
+}
+
+function addToCart() {
+    const cartBilling = document.querySelector('.cart-billing');
+    const cartItem = document.querySelector('.cart');
+
+    // Clone the item from the cart section
+    const clonedItem = cartItem.cloneNode(true);
+
+    // Remove the "Add" button from the cloned item
+    const addBtn = clonedItem.querySelector('.addbtn');
+    addBtn.innerHTML = '';
+
+    // Add the cloned item to the cart-billing section
+    cartBilling.appendChild(clonedItem);
+
+    // Close the cart section
+    cartItem.style.display = 'none';
+}
+
+</script>
 
 </html>
