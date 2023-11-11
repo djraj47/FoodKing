@@ -30,7 +30,7 @@ loginform.addEventListener("click", function (event) {
     if (name === user && pass === password) {
         message.textContent = `Welcome ${username}`;
         loggedin.style.display = "none";
-        loggedout.style.display = "block";
+        loggedout.style.display = "flex";
         showname.textContent = `${username}`;
 
 
@@ -73,6 +73,7 @@ function searchRestaurants() {
     }
 }
 
-function openPage(link){
-    window.location.href = link;
+
+function openPage(pageUrl) {
+    window.location.href = pageUrl;
 }
