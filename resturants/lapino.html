@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
     <!-- navbar seection -->
     <nav>
         <div class="logo">
@@ -27,9 +26,9 @@
             <div class="location">
                 <i class="fa-solid fa-location-arrow" style="color: #db0a0a;"></i>
                 <select id="location">
-                    <option value="newyork">New York</option>
-                    <option value="losangeles">Los Angeles</option>
-                    <option value="chicago">Chicago</option>
+                    <option value="newyork">Ghaziabad</option>
+                    <option value="losangeles">Noida</option>
+                    <option value="chicago">Ncr</option>
                 </select>
                 <input type="text" id="searchInput" placeholder="Search food">
                 <button class="search-btn" onclick="searchRestaurants()"> <i class="fa-solid fa-magnifying-glass"></i>
@@ -42,7 +41,7 @@
 
         <ul class="loggedout">
             <li>
-                <img src="../images/sticker.png" width="50px" alt="">
+                <img src="images/sticker.png" width="50px" alt="">
             </li>
             <li>
                 <p class="name"></p>
@@ -57,15 +56,15 @@
     <!-- resturant description -->
     <section class="resturant-desc">
         <div class="resturant-img">
-            <img src="../images/mcdonlad-logo.png" width="400px" alt="">
+            <img src="../images/lapinoz.png" width="400px" alt="">
         </div>
         <div class="resturant-title">
-            <h2>Mc Downald's</h2>
-            <h3>Pizza, Burger, Wraps, Fries </h3>
-            <h3>Sector-62, Noida</h3>
+            <h2>La Pino'z Pizza</h2>
+            <h3>Pizzas</h3>
+            <h3>Viaj Nagar, Ghaziabad</h3>
             <p><span>Open now - </span> 12midnight - 3am, 11am - 12midnight </p>
             <div class="ratings">
-                <span><i class="fa-solid fa-star" style="color: #f5d400;"></i> 4.5</span>
+                <span><i class="fa-solid fa-star" style="color: #f5d400;"></i> 4.1</span>
             </div>
             <div class="direction">
                 <div>
@@ -1010,7 +1009,7 @@
             <!-- review section  -->
 
             <div class="reviews">
-                <h3>McDonald's Reviews</h3>
+                <h3>La Pino'z Pizza Reviews</h3>
 
                 <div class="review-box">
                     <div class="reviewer">
@@ -1143,7 +1142,7 @@
             </div>
 
             <div class="photos">
-                <h3>McDonald's Photos</h3>
+                <h3>La Pino'z Pizza Photos</h3>
 
                 <div class="photos-btn">
                     <button>All(74)</button>
@@ -1162,22 +1161,11 @@
                     <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
                     <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
                     <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
-                    <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
-                    <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
-                    <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
-                    <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
-                    <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
-                    <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
-                    <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
-                    <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
-                    <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
-                    <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
-                    <div class="small-box"><img src="../images/marherita.jpg" alt=""></div>
+
                 </div>
             </div>
         </div>
     </section>
-
 
     <section class="cart" style="display:none;">
         <span onclick="removeModal()"">&times;</span>
@@ -1226,8 +1214,8 @@
     </footer>
 
 
-</body>
 
+</body>
 <!-- <script src="/script/script.js"></script> -->
 <script src="../script/cart.js" defer></script>
 <script src="../script/resturant.js" defer></script>
@@ -1253,7 +1241,6 @@
 
                 localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
-                // window.location.href = 'cart.html';
             });
         });
     });
